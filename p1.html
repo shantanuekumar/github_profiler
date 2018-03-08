@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+<head>
+	<title>github data</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script type="text/javascript" src="p.js"></script>
+	<link rel="stylesheet" type="text/css" href="p.css">
+
+</head>
+<body id="body1" ng-controller='control as ct' >
+   <header>
+   <img class="img1" src="images/podium.png">
+   <div >
+   <form ng-submit="ct.details(user)">
+   <input  type="text" size="70" ng-model="user.name" ng-keypress="ct.details(user)" ng-keydown="ct.details(user)">
+   <input type="submit" style="height: 0px; width: 0px; border: none; padding: 0px;" hidefocus="true" />
+   <button ng-click="ct.details(user)" class="btn"></button>
+   </form>
+   </div>
+   
+   </header>
+   <section id="section" >
+        
+   	  <table>
+   	  	<tr ng-repeat="val in ele" >
+   	  		<td class="td1" ng-click="count($index)"><a ng-href="p2.html">{{val.login}}</a></td><td><img class="img" ng-src="{{val.avatar_url}}"></td>
+   	  	</tr>
+
+   	  </table>
+         
+   </section>
+
+<script type="text/javascript">
+	
+</script>
+</body>
+</html>

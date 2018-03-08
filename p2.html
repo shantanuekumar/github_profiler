@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app='app' >
+<head>
+	<title>github data</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script type="text/javascript" src="p.js"></script>
+	<link rel="stylesheet" type="text/css" href="p.css">
+
+</head>
+<body id="body2" ng-controller='contra as ct' ng-model="row">
+   <header>
+   <img class="img1" src="images/podium.png">
+   <img class="img2" ng-src="{{row.avatar_url}}">  
+   </header>
+   <section id="section" ng-model="row">
+   	  <table>
+   	  	<tr ng-repeat="(key,val) in row">
+   	  		<td class="td2">{{key}}</td><td class="td3">{{val}}</td>
+   	  	</tr>
+
+   	  </table> 
+   	  <h2>REPOSITORIES</h2>
+   	  <table>
+   	  	<tr ng-repeat="val in ele">
+   	  		<td class="td3">{{val.name}}</td>
+   	  	</tr>
+   	  </table>
+   </section>
+</body>
+</html>
